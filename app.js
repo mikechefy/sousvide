@@ -1,16 +1,20 @@
 // Sousvide Cheat Sheet — tiny renderer.
 // Loads data.json, renders category/item/profile tables, wires up search filter.
 
-// Inline SVG icons per category id. Lucide/shadcn-style line icons.
+// Inline SVG icons per category id. Sourced from Lucide (lucide.dev), MIT.
+// Lamb has no Lucide icon — using `bone` as a stand-in for bone-in cuts.
 // Add a new category to data.json → also add its icon here.
+const SVG_ATTRS =
+  'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+
 const ICONS = {
-  beef: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8c0-2.2 1.8-4 4-4h2c2.2 0 4 1.8 4 4v8c0 2.2-1.8 4-4 4h-2c-2.2 0-4-1.8-4-4z"/><circle cx="11" cy="11" r="1"/><circle cx="14" cy="14" r="0.8"/><path d="M11 16h2"/></svg>`,
-  pork: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6l3 2"/><path d="M19 6l-3 2"/><circle cx="12" cy="13" r="7"/><ellipse cx="12" cy="14" rx="3" ry="2"/><path d="M11 14h.01"/><path d="M13 14h.01"/></svg>`,
-  poultry: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="9" cy="16" rx="5" ry="4"/><path d="M11.5 13l5-5"/><circle cx="18" cy="6.5" r="1.7"/><circle cx="15.5" cy="9" r="1.7"/></svg>`,
-  lamb: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="14" r="4"/><circle cx="7" cy="12" r="2.4"/><circle cx="17" cy="12" r="2.4"/><circle cx="9" cy="8" r="2"/><circle cx="15" cy="8" r="2"/><path d="M11 14h.01"/><path d="M13 14h.01"/></svg>`,
-  fish: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c2-2.5 5-4.5 8-4.5s6 2 8 4.5c-2 2.5-5 4.5-8 4.5s-6-2-8-4.5z"/><path d="M19 12l3-2v4z"/><path d="M7 11h.01"/></svg>`,
-  eggs: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-3.5 0-6.5 4.5-6.5 9 0 4.5 3 8 6.5 8s6.5-3.5 6.5-8c0-4.5-3-9-6.5-9z"/></svg>`,
-  vegetables: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 7l-9 9c-1 1-1 3 0 4s3 1 4 0l9-9"/><path d="M14 7l3-3"/><path d="M14 7l5-1"/><path d="M18 11l3-3"/></svg>`,
+  beef: `<svg ${SVG_ATTRS}><path d="M16.4 13.7A6.5 6.5 0 1 0 6.28 6.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.3"/><path d="m18.5 6 2.19 4.5a6.48 6.48 0 0 1-2.29 7.2C15.4 20.2 11 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5"/><circle cx="12.5" cy="8.5" r="2.5"/></svg>`,
+  pork: `<svg ${SVG_ATTRS}><path d="M13.144 21.144A7.274 10.445 45 1 0 2.856 10.856"/><path d="M13.144 21.144A7.274 4.365 45 0 0 2.856 10.856a7.274 4.365 45 0 0 10.288 10.288"/><path d="M16.565 10.435 18.6 8.4a2.501 2.501 0 1 0 1.65-4.65 2.5 2.5 0 1 0-4.66 1.66l-2.024 2.025"/><path d="m8.5 16.5-1-1"/></svg>`,
+  poultry: `<svg ${SVG_ATTRS}><path d="M15.4 15.63a7.875 6 135 1 1 6.23-6.23 4.5 3.43 135 0 0-6.23 6.23"/><path d="m8.29 12.71-2.6 2.6a2.5 2.5 0 1 0-1.65 4.65A2.5 2.5 0 1 0 8.7 18.3l2.59-2.59"/></svg>`,
+  lamb: `<svg ${SVG_ATTRS}><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"/></svg>`,
+  fish: `<svg ${SVG_ATTRS}><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/><path d="M18 12v.5"/><path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"/><path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"/><path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"/><path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"/></svg>`,
+  eggs: `<svg ${SVG_ATTRS}><path d="M12 2C8 2 4 8 4 14a8 8 0 0 0 16 0c0-6-4-12-8-12"/></svg>`,
+  vegetables: `<svg ${SVG_ATTRS}><path d="M2.27 21.7s9.87-3.5 12.73-6.36a4.5 4.5 0 0 0-6.36-6.37C5.77 11.84 2.27 21.7 2.27 21.7zM8.64 14l-2.05-2.04M15.34 15l-2.46-2.46"/><path d="M22 9s-1.33-2-3.5-2C16.86 7 15 9 15 9s1.33 2 3.5 2S22 9 22 9z"/><path d="M15 2s-2 1.33-2 3.5S15 9 15 9s2-1.84 2-3.5C17 3.33 15 2 15 2z"/></svg>`,
 };
 
 (async function () {
