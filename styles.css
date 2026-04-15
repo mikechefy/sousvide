@@ -124,7 +124,8 @@ header {
 
 /* ---------- Main ---------- */
 
-main {
+/* Selector specificity must beat `.container` (which sets padding: 0 24px). */
+main.container {
   padding-top: 72px;
   padding-bottom: 80px;
 }
@@ -332,7 +333,7 @@ footer p {
     max-width: none;
   }
 
-  main {
+  main.container {
     padding-top: 48px;
   }
 
