@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "1.0",
+    "version": "2.0",
     "updated": "2026-04-15",
-    "disclaimer": "Guidelines only. Follow food safety rules for pasteurization — especially for poultry, pork, and eggs."
+    "disclaimer": "Guidelines only — follow food safety rules for pasteurisation, especially poultry, pork and eggs. Times and temperatures sourced from the linked references."
   },
   "categories": [
     {
@@ -10,57 +10,80 @@
       "name": "Beef",
       "items": [
         {
-          "cut": "Steak — tender cuts (ribeye, strip, tenderloin)",
-          "notes": "Thickness 1–2 inches. Sear hard and fast after the bath for a crust.",
+          "cut": "Scotch fillet (ribeye)",
+          "notes": "1–2 inch thickness. Sear hard and fast after the bath for a crust.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/food-lab-complete-guide-to-sous-vide-steak" },
           "profiles": [
-            { "result": "Rare",        "tempC": 50, "timeMin": 60,  "timeMax": 180 },
-            { "result": "Medium-rare", "tempC": 54, "timeMin": 60,  "timeMax": 240, "recommended": true },
-            { "result": "Medium",      "tempC": 58, "timeMin": 60,  "timeMax": 240 },
-            { "result": "Medium-well", "tempC": 63, "timeMin": 60,  "timeMax": 240 },
-            { "result": "Well",        "tempC": 68, "timeMin": 60,  "timeMax": 240 }
+            { "result": "Rare",        "tempC": 49, "time": 60 },
+            { "result": "Medium-rare", "tempC": 54, "time": 60, "recommended": true },
+            { "result": "Medium",      "tempC": 57, "time": 60 },
+            { "result": "Medium-well", "tempC": 60, "time": 60 },
+            { "result": "Well",        "tempC": 65, "time": 60 }
           ]
         },
         {
-          "cut": "Filet mignon",
-          "notes": "Lean and tender — keep cooks short to preserve texture.",
+          "cut": "Eye fillet (tenderloin)",
+          "notes": "Lean and tender — keep the cook short and the sear quick.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/food-lab-complete-guide-to-sous-vide-steak" },
           "profiles": [
-            { "result": "Rare",        "tempC": 50, "timeMin": 45,  "timeMax": 120 },
-            { "result": "Medium-rare", "tempC": 54, "timeMin": 45,  "timeMax": 180, "recommended": true },
-            { "result": "Medium",      "tempC": 58, "timeMin": 45,  "timeMax": 180 }
+            { "result": "Rare",        "tempC": 49, "time": 60 },
+            { "result": "Medium-rare", "tempC": 54, "time": 60, "recommended": true },
+            { "result": "Medium",      "tempC": 57, "time": 60 }
           ]
         },
         {
-          "cut": "Roast (prime rib, tri-tip, sirloin)",
-          "notes": "Thick cuts need longer for edge-to-edge doneness.",
+          "cut": "Porterhouse / sirloin",
+          "notes": "Slice across the grain after searing. Watch for the fat strip.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/food-lab-complete-guide-to-sous-vide-steak" },
           "profiles": [
-            { "result": "Rare",        "tempC": 52, "timeMin": 300, "timeMax": 480 },
-            { "result": "Medium-rare", "tempC": 55, "timeMin": 300, "timeMax": 480, "recommended": true },
-            { "result": "Medium",      "tempC": 60, "timeMin": 300, "timeMax": 480 }
+            { "result": "Rare",        "tempC": 49, "time": 60 },
+            { "result": "Medium-rare", "tempC": 54, "time": 60, "recommended": true },
+            { "result": "Medium",      "tempC": 57, "time": 60 },
+            { "result": "Medium-well", "tempC": 60, "time": 60 }
           ]
         },
         {
-          "cut": "Flank, skirt, hanger",
-          "notes": "Thin cuts. Slice thin across the grain after searing.",
+          "cut": "Rump (top sirloin)",
+          "notes": "Tougher than scotch or eye fillet — give it a bit longer in the bath.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/food-lab-complete-guide-to-sous-vide-steak" },
           "profiles": [
-            { "result": "Medium-rare", "tempC": 54, "timeMin": 120, "timeMax": 240, "recommended": true },
-            { "result": "Medium",      "tempC": 58, "timeMin": 120, "timeMax": 240 }
+            { "result": "Medium-rare", "tempC": 54, "time": 120, "recommended": true },
+            { "result": "Medium",      "tempC": 57, "time": 120 }
           ]
         },
         {
-          "cut": "Short ribs",
-          "notes": "The hallmark sousvide trick — tender at steak-like temps given enough time.",
+          "cut": "Beef cheek",
+          "notes": "Long cook breaks down collagen for melt-in-mouth braised texture.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/72-hour-sous-vide-beef-cheek" },
           "profiles": [
-            { "result": "Tender, steak-like", "tempC": 57, "timeMin": 2880, "timeMax": 4320 },
-            { "result": "Traditional braise", "tempC": 74, "timeMin": 1080, "timeMax": 1440, "recommended": true }
+            { "result": "Tender, steak-like", "tempC": 60, "time": 4320, "recommended": true }
           ]
         },
         {
-          "cut": "Tough cuts (chuck, brisket)",
-          "notes": "Collagen breaks down through either long time or high temperature.",
+          "cut": "Beef brisket",
+          "notes": "Two camps: low-and-slow steak-like, or hot-and-long traditional braise.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-barbecue-smoked-bbq-brisket-texas-recipe" },
           "profiles": [
-            { "result": "Steak-like, medium-rare", "tempC": 57, "timeMin": 2160, "timeMax": 2880 },
-            { "result": "Traditional braise",      "tempC": 74, "timeMin": 1080, "timeMax": 1800, "recommended": true },
-            { "result": "Pull-apart",              "tempC": 85, "timeMin": 480,  "timeMax": 720 }
+            { "result": "Steak-like, sliceable", "tempC": 57, "time": 2160 },
+            { "result": "Traditional braise",    "tempC": 71, "time": 1440, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Beef short ribs",
+          "notes": "Steak-like at low temp, fall-apart at high temp. Both work.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-short-ribs-recipe-food-lab" },
+          "profiles": [
+            { "result": "Tender, steak-like",  "tempC": 57, "time": 2880 },
+            { "result": "Traditional braise",  "tempC": 74, "time": 1440, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Chuck / blade",
+          "notes": "Cheap and forgiving. Long cook turns it tender or pulls it apart.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-smoked-barbecue-bbq-beef-chuck-recipe" },
+          "profiles": [
+            { "result": "Steak-like", "tempC": 57, "time": 2160 },
+            { "result": "Pulled",     "tempC": 74, "time": 1440, "recommended": true }
           ]
         }
       ]
@@ -70,54 +93,56 @@
       "name": "Pork",
       "items": [
         {
-          "cut": "Chop (loin, rib)",
-          "notes": "Thickness 1–1.5 inches. Sear hard after the bath.",
+          "cut": "Pork cutlet",
+          "notes": "Far juicier than pan-fried. Sear hard after the bath.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-pork-chops-recipe" },
           "profiles": [
-            { "result": "Blushing",    "tempC": 58, "timeMin": 60, "timeMax": 240, "recommended": true },
-            { "result": "Traditional", "tempC": 62, "timeMin": 60, "timeMax": 240 },
-            { "result": "Well-done",   "tempC": 68, "timeMin": 60, "timeMax": 240 }
+            { "result": "Blushing",    "tempC": 57, "time": 90, "recommended": true },
+            { "result": "Traditional", "tempC": 60, "time": 90 },
+            { "result": "Well-done",   "tempC": 71, "time": 90 }
           ]
         },
         {
-          "cut": "Tenderloin",
-          "notes": "Lean and tender. Quick cooks, hot sear.",
+          "cut": "Pork eye fillet (tenderloin)",
+          "notes": "Lean and quick. Don't overcook it.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-pork-tenderloin-recipe" },
           "profiles": [
-            { "result": "Blushing",    "tempC": 58, "timeMin": 60, "timeMax": 240, "recommended": true },
-            { "result": "Traditional", "tempC": 62, "timeMin": 60, "timeMax": 240 }
+            { "result": "Blushing",    "tempC": 57, "time": 90, "recommended": true },
+            { "result": "Traditional", "tempC": 60, "time": 90 }
           ]
         },
         {
-          "cut": "Loin roast",
-          "notes": "Longer cook for even temperature through a thick roast.",
+          "cut": "Pork loin roast",
+          "notes": "Even temperature edge-to-edge through a thick roast.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-pork-loin-roast-recipe" },
           "profiles": [
-            { "result": "Medium-rare", "tempC": 58, "timeMin": 180, "timeMax": 300, "recommended": true },
-            { "result": "Medium",      "tempC": 62, "timeMin": 180, "timeMax": 300 }
+            { "result": "Medium-rare", "tempC": 57, "time": 180, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "time": 180 }
           ]
         },
         {
-          "cut": "Belly",
-          "notes": "Render fat without drying the meat.",
+          "cut": "Pork belly",
+          "notes": "Renders fat without drying out. Crisp the skin separately afterwards.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/crispy-sous-vide-pork-belly-recipe" },
           "profiles": [
-            { "result": "Firm, sliceable", "tempC": 75, "timeMin": 720,  "timeMax": 720 },
-            { "result": "Tender",          "tempC": 77, "timeMin": 1440, "timeMax": 1440, "recommended": true },
-            { "result": "Crispy-ready",    "tempC": 85, "timeMin": 480,  "timeMax": 600 }
+            { "result": "Crispy-ready", "tempC": 77, "time": 720, "recommended": true }
           ]
         },
         {
-          "cut": "Shoulder / Boston butt",
-          "notes": "For pulled pork, or low-temp for carving.",
+          "cut": "Pork shoulder",
+          "notes": "Long cook for shreddable, juicy pulled pork.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-barbecue-bbq-pulled-pork-shoulder-recipe" },
           "profiles": [
-            { "result": "Steak-like", "tempC": 65, "timeMin": 1440, "timeMax": 2160 },
-            { "result": "Pulled",     "tempC": 74, "timeMin": 1080, "timeMax": 1440, "recommended": true }
+            { "result": "Pulled", "tempC": 74, "time": 1440, "recommended": true }
           ]
         },
         {
-          "cut": "Ribs (baby back, spare)",
-          "notes": "Finish on the grill or under the broiler with sauce.",
+          "cut": "Pork ribs",
+          "notes": "Finish under the grill or broiler with sauce for the bark.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-barbecue-bbq-ribs-recipe" },
           "profiles": [
-            { "result": "Tender with bite", "tempC": 60, "timeMin": 1440, "timeMax": 2160, "recommended": true },
-            { "result": "Traditional",      "tempC": 74, "timeMin": 720,  "timeMax": 1080 },
-            { "result": "Fall-off-bone",    "tempC": 80, "timeMin": 480,  "timeMax": 720 }
+            { "result": "Tender with bite", "tempC": 60, "time": 2160 },
+            { "result": "Fall-off-bone",    "tempC": 74, "time": 720, "recommended": true }
           ]
         }
       ]
@@ -128,43 +153,56 @@
       "items": [
         {
           "cut": "Chicken breast",
-          "notes": "Pasteurized from 60°C+. Juicier than any oven result.",
+          "notes": "Pasteurised at 60°C+ given enough time. Juicier than any oven cook.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/the-food-lab-complete-guide-to-sous-vide-chicken-breast" },
           "profiles": [
-            { "result": "Very soft, juicy",   "tempC": 60, "timeMin": 60, "timeMax": 180, "recommended": true },
-            { "result": "Tender",             "tempC": 63, "timeMin": 60, "timeMax": 180 },
-            { "result": "Firm, traditional",  "tempC": 66, "timeMin": 60, "timeMax": 180 }
+            { "result": "Very juicy",   "tempC": 60, "time": 90, "recommended": true },
+            { "result": "Tender",       "tempC": 63, "time": 90 },
+            { "result": "Traditional",  "tempC": 66, "time": 90 }
           ]
         },
         {
-          "cut": "Chicken thigh",
-          "notes": "More fat tolerates higher temps. Crisp the skin after.",
+          "cut": "Chicken thigh fillet",
+          "notes": "More fat tolerates higher temps. Crisp the skin in a hot pan after.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-chicken-thigh-recipe" },
           "profiles": [
-            { "result": "Tender",              "tempC": 65, "timeMin": 90, "timeMax": 240 },
-            { "result": "Traditional, firmer", "tempC": 74, "timeMin": 60, "timeMax": 240, "recommended": true }
+            { "result": "Tender",      "tempC": 65, "time": 90 },
+            { "result": "Traditional", "tempC": 74, "time": 90, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Chicken Maryland",
+          "notes": "Bone-in leg quarter. Crisp skin separately under the grill.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-chicken-legs" },
+          "profiles": [
+            { "result": "Tender, traditional", "tempC": 74, "time": 240, "recommended": true }
           ]
         },
         {
           "cut": "Turkey breast",
-          "notes": "Great for Thanksgiving — pasteurized without drying out.",
+          "notes": "Great for Christmas — pasteurised without drying out.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-turkey-breast-recipe" },
           "profiles": [
-            { "result": "Juicy",       "tempC": 63, "timeMin": 120, "timeMax": 240, "recommended": true },
-            { "result": "Traditional", "tempC": 66, "timeMin": 120, "timeMax": 240 }
+            { "result": "Juicy",       "tempC": 63, "time": 180, "recommended": true },
+            { "result": "Traditional", "tempC": 66, "time": 180 }
           ]
         },
         {
           "cut": "Duck breast",
-          "notes": "Score the skin first. Render skin hard in a cold pan after.",
+          "notes": "Score the skin first. Render skin hard in a cold pan after the bath.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-duck-breast-recipe" },
           "profiles": [
-            { "result": "Rare",        "tempC": 54, "timeMin": 60, "timeMax": 180 },
-            { "result": "Medium-rare", "tempC": 57, "timeMin": 60, "timeMax": 180, "recommended": true },
-            { "result": "Medium",      "tempC": 60, "timeMin": 60, "timeMax": 180 }
+            { "result": "Rare",        "tempC": 54, "time": 90 },
+            { "result": "Medium-rare", "tempC": 57, "time": 90, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "time": 90 }
           ]
         },
         {
-          "cut": "Duck leg (confit)",
-          "notes": "Classic confit texture without rendering in duck fat.",
+          "cut": "Duck Maryland (confit)",
+          "notes": "Classic confit texture without rendering in a vat of duck fat.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-duck-confit" },
           "profiles": [
-            { "result": "Confit-style", "tempC": 80, "timeMin": 480, "timeMax": 720, "recommended": true }
+            { "result": "Confit-style", "tempC": 80, "time": 480, "recommended": true }
           ]
         }
       ]
@@ -174,28 +212,47 @@
       "name": "Lamb",
       "items": [
         {
-          "cut": "Chop / rack",
-          "notes": "Delicate. Sear hot and fast after the bath.",
+          "cut": "Lamb cutlet / rack",
+          "notes": "Sear hot and fast — the meat is delicate.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-lamb-chops-recipe" },
           "profiles": [
-            { "result": "Rare",        "tempC": 52, "timeMin": 60, "timeMax": 120 },
-            { "result": "Medium-rare", "tempC": 56, "timeMin": 60, "timeMax": 180, "recommended": true },
-            { "result": "Medium",      "tempC": 60, "timeMin": 60, "timeMax": 180 }
+            { "result": "Rare",        "tempC": 52, "time": 90 },
+            { "result": "Medium-rare", "tempC": 56, "time": 90, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "time": 90 }
           ]
         },
         {
-          "cut": "Leg",
+          "cut": "Lamb backstrap",
+          "notes": "Lean and tender. Quick cook, hot sear.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-lamb-loin" },
+          "profiles": [
+            { "result": "Medium-rare", "tempC": 56, "time": 60, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "time": 60 }
+          ]
+        },
+        {
+          "cut": "Leg of lamb",
           "notes": "Long cook for even doneness through a thick cut.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-leg-of-lamb-recipe" },
           "profiles": [
-            { "result": "Medium-rare", "tempC": 56, "timeMin": 300, "timeMax": 480, "recommended": true },
-            { "result": "Medium",      "tempC": 60, "timeMin": 300, "timeMax": 480 }
+            { "result": "Medium-rare", "tempC": 56, "time": 360, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "time": 360 }
           ]
         },
         {
-          "cut": "Shank / shoulder",
-          "notes": "Collagen-rich — long cooks tenderize beautifully.",
+          "cut": "Lamb shank",
+          "notes": "Collagen-rich. Long cook tenderises beautifully without drying.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-lamb-shank" },
           "profiles": [
-            { "result": "Tender, medium-rare", "tempC": 60, "timeMin": 1440, "timeMax": 2880 },
-            { "result": "Traditional braise",  "tempC": 74, "timeMin": 1080, "timeMax": 1440, "recommended": true }
+            { "result": "Tender braise", "tempC": 74, "time": 1440, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Lamb shoulder",
+          "notes": "Pull-apart tender for slow-cooked dishes.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-lamb-shoulder-recipe" },
+          "profiles": [
+            { "result": "Pulled", "tempC": 74, "time": 1080, "recommended": true }
           ]
         }
       ]
@@ -207,48 +264,60 @@
         {
           "cut": "Salmon",
           "notes": "Lower temps preserve the silky texture. Salt lightly 10 min before bagging.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-salmon-recipe" },
           "profiles": [
-            { "result": "Sashimi-like",        "tempC": 43, "timeMin": 30, "timeMax": 45 },
-            { "result": "Soft, silky",         "tempC": 50, "timeMin": 30, "timeMax": 45, "recommended": true },
-            { "result": "Traditional, flaky",  "tempC": 55, "timeMin": 30, "timeMax": 45 }
+            { "result": "Sashimi-like",       "tempC": 43, "time": 30 },
+            { "result": "Soft, silky",        "tempC": 50, "time": 30, "recommended": true },
+            { "result": "Traditional, flaky", "tempC": 55, "time": 30 }
           ]
         },
         {
-          "cut": "Tuna",
-          "notes": "Keep cooks short to preserve color.",
+          "cut": "Tuna (yellowfin)",
+          "notes": "Keep it short and cool to preserve the colour and texture.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-tuna" },
           "profiles": [
-            { "result": "Rare, sashimi", "tempC": 43, "timeMin": 30, "timeMax": 45, "recommended": true },
-            { "result": "Medium-rare",   "tempC": 52, "timeMin": 30, "timeMax": 45 }
+            { "result": "Rare, sashimi", "tempC": 43, "time": 30, "recommended": true },
+            { "result": "Medium-rare",   "tempC": 52, "time": 30 }
           ]
         },
         {
-          "cut": "White fish (cod, halibut, sea bass)",
-          "notes": "Delicate — handle gently after the bath.",
+          "cut": "Barramundi",
+          "notes": "Delicate Aussie favourite. Handle gently after the bath.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-fish" },
           "profiles": [
-            { "result": "Silky", "tempC": 52, "timeMin": 30, "timeMax": 45, "recommended": true },
-            { "result": "Flaky", "tempC": 55, "timeMin": 30, "timeMax": 45 }
+            { "result": "Tender, silky", "tempC": 52, "time": 30, "recommended": true }
           ]
         },
         {
-          "cut": "Shrimp",
-          "notes": "Quick cooks only. Shock in ice water if not serving immediately.",
+          "cut": "Snapper",
+          "notes": "Mild and flaky. Don't overcook — the texture turns dry fast.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-fish" },
           "profiles": [
-            { "result": "Tender, juicy", "tempC": 55, "timeMin": 15, "timeMax": 30, "recommended": true },
-            { "result": "Firm",          "tempC": 60, "timeMin": 15, "timeMax": 30 }
+            { "result": "Tender", "tempC": 52, "time": 30, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Prawns",
+          "notes": "Quick cook. Shock in iced water if not serving immediately.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-shrimp-recipe" },
+          "profiles": [
+            { "result": "Tender, juicy", "tempC": 55, "time": 20, "recommended": true }
           ]
         },
         {
           "cut": "Scallops",
           "notes": "Sear hard on one side after — don't flip.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-scallops" },
           "profiles": [
-            { "result": "Just-set", "tempC": 50, "timeMin": 30, "timeMax": 45, "recommended": true }
+            { "result": "Just-set", "tempC": 50, "time": 30, "recommended": true }
           ]
         },
         {
-          "cut": "Lobster tail",
-          "notes": "Butter-poached luxury. Bag with a pat of butter.",
+          "cut": "Rock lobster tail",
+          "notes": "Butter-poached luxury. Bag with a generous knob of butter.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-lobster-tail-recipe" },
           "profiles": [
-            { "result": "Butter-tender", "tempC": 60, "timeMin": 30, "timeMax": 45, "recommended": true }
+            { "result": "Butter-tender", "tempC": 60, "time": 30, "recommended": true }
           ]
         }
       ]
@@ -258,14 +327,15 @@
       "name": "Eggs",
       "items": [
         {
-          "cut": "Whole egg (in shell)",
+          "cut": "Whole egg in shell",
           "notes": "Times vary slightly with egg size and starting temperature.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-101-all-about-eggs" },
           "profiles": [
-            { "result": "Onsen tamago (soft)", "tempC": 63, "timeMin": 45, "timeMax": 60, "recommended": true },
-            { "result": "Soft custardy",       "tempC": 64, "timeMin": 45, "timeMax": 45 },
-            { "result": "Medium",              "tempC": 68, "timeMin": 45, "timeMax": 45 },
-            { "result": "Hard-boiled",         "tempC": 75, "timeMin": 60, "timeMax": 60 },
-            { "result": "Pasteurized raw",     "tempC": 57, "timeMin": 75, "timeMax": 75 }
+            { "result": "Onsen tamago (soft)", "tempC": 63, "time": 60, "recommended": true },
+            { "result": "Soft custardy",       "tempC": 64, "time": 45 },
+            { "result": "Medium",              "tempC": 68, "time": 45 },
+            { "result": "Hard-boiled",         "tempC": 75, "time": 60 },
+            { "result": "Pasteurised raw",     "tempC": 57, "time": 75 }
           ]
         }
       ]
@@ -275,38 +345,43 @@
       "name": "Vegetables",
       "items": [
         {
-          "cut": "Root vegetables (carrots, parsnips, beets)",
-          "notes": "Tender without going mushy — far better than boiling.",
+          "cut": "Root vegetables (carrots, parsnips, beetroot)",
+          "notes": "Concentrates sweetness without going mushy.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-glazed-carrots-recipe" },
           "profiles": [
-            { "result": "Tender, firm bite", "tempC": 85, "timeMin": 60, "timeMax": 120, "recommended": true }
+            { "result": "Tender", "tempC": 85, "time": 60, "recommended": true }
           ]
         },
         {
           "cut": "Potatoes",
-          "notes": "Great for parboil-then-roast without waterlogging.",
+          "notes": "Parcook before roasting or frying — no waterlogging.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-potatoes" },
           "profiles": [
-            { "result": "Fork-tender", "tempC": 85, "timeMin": 45, "timeMax": 90, "recommended": true }
+            { "result": "Fork-tender", "tempC": 85, "time": 60, "recommended": true }
           ]
         },
         {
-          "cut": "Asparagus / green beans",
-          "notes": "Bright color, crisp-tender snap.",
+          "cut": "Pumpkin",
+          "notes": "Holds shape while softening — great base for soups and purées.",
+          "source": { "name": "ChefSteps", "url": "https://www.chefsteps.com/activities/sous-vide-squash" },
           "profiles": [
-            { "result": "Crisp-tender", "tempC": 85, "timeMin": 10, "timeMax": 15, "recommended": true }
+            { "result": "Tender", "tempC": 85, "time": 60, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Asparagus",
+          "notes": "Bright colour, crisp-tender snap.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-asparagus-recipe" },
+          "profiles": [
+            { "result": "Crisp-tender", "tempC": 85, "time": 12, "recommended": true }
           ]
         },
         {
           "cut": "Corn on the cob",
-          "notes": "Sweeter and more concentrated than boiled.",
+          "notes": "Sweeter and more concentrated than boiled. Bag with butter.",
+          "source": { "name": "Serious Eats", "url": "https://www.seriouseats.com/sous-vide-corn-on-the-cob-recipe" },
           "profiles": [
-            { "result": "Tender sweet", "tempC": 83, "timeMin": 30, "timeMax": 30, "recommended": true }
-          ]
-        },
-        {
-          "cut": "Winter squash (butternut, acorn)",
-          "notes": "Good base for soups and purées.",
-          "profiles": [
-            { "result": "Tender", "tempC": 85, "timeMin": 60, "timeMax": 120, "recommended": true }
+            { "result": "Tender sweet", "tempC": 85, "time": 30, "recommended": true }
           ]
         }
       ]

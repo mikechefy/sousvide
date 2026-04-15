@@ -288,6 +288,31 @@ main.container {
   border-radius: 50%;
 }
 
+.item .source {
+  margin: 14px 0 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.item .source a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--muted) 40%, transparent);
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+}
+
+.item .source a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.item .source .external-arrow {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
 /* ---------- Footer ---------- */
 
 footer {

@@ -44,17 +44,6 @@ function formatTime(min) {
   return `${whole}h ${rem}m`;
 }
 
-function formatTimeRange(min, max) {
-  if (min === max) return formatTime(min);
-  if (max < 60) return `${min}–${max}m`;
-  const minH = min / 60;
-  const maxH = max / 60;
-  if (Number.isInteger(minH) && Number.isInteger(maxH) && min >= 60) {
-    return `${minH}–${maxH}h`;
-  }
-  return `${formatTime(min)} – ${formatTime(max)}`;
-}
-
 function render(data) {
   const main = document.getElementById("content");
 
@@ -153,7 +142,7 @@ function buildItem(item, categoryName) {
 
     const tdTime = document.createElement("td");
     tdTime.className = "time";
-    tdTime.textContent = formatTimeRange(profile.timeMin, profile.timeMax);
+    tdTime.textContent = formatTime(profile.time);
 
     tr.append(tdResult, tdTemp, tdTime);
     tbody.appendChild(tr);
@@ -161,6 +150,24 @@ function buildItem(item, categoryName) {
 
   table.appendChild(tbody);
   article.appendChild(table);
+
+  if (item.source && item.source.url) {
+    const sourceP = document.createElement("p");
+    sourceP.className = "source";
+    sourceP.append("Source: ");
+    const a = document.createElement("a");
+    a.href = item.source.url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = item.source.name || "link";
+    const arrow = document.createElement("span");
+    arrow.className = "external-arrow";
+    arrow.textContent = " ↗";
+    a.appendChild(arrow);
+    sourceP.appendChild(a);
+    article.appendChild(sourceP);
+  }
+
   return article;
 }
 
