@@ -385,6 +385,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "others",
+      "name": "Others",
+      "items": [
+        {
+          "cut": "Garlic-infused oil",
+          "notes": "Low heat draws out garlic flavour without browning. Keep refrigerated and use within a week — botulism risk with garlic in oil at room temp.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-infused-oils" },
+          "profiles": [
+            { "result": "Infused", "tempC": 55, "time": 180, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Herb-infused oil",
+          "notes": "Rosemary, thyme, basil or sage. Strain once cool and bottle.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-herb-infused-olive-oil" },
+          "profiles": [
+            { "result": "Infused", "tempC": 55, "time": 180, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Chilli-infused oil",
+          "notes": "Dried chillies work best. Low temp keeps the oil clear and the colour bright.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-hot-chili-oil" },
+          "profiles": [
+            { "result": "Infused", "tempC": 55, "time": 180, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Garlic confit",
+          "notes": "Whole cloves poached in oil until soft and sweet. Spread on toast or mash into dressings.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-garlic-confit" },
+          "profiles": [
+            { "result": "Soft, spreadable", "tempC": 85, "time": 75, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Hollandaise",
+          "notes": "Blend yolks, lemon and melted butter, bag and cook. No whisking over a bain-marie.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-hollandaise-sauce" },
+          "profiles": [
+            { "result": "Silky, emulsified", "tempC": 62, "time": 30, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Béarnaise",
+          "notes": "Reduce the tarragon, shallot and vinegar first, then bag with yolks and butter.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-bernaise-sauce" },
+          "profiles": [
+            { "result": "Silky, emulsified", "tempC": 79, "time": 45, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Lemon curd",
+          "notes": "No double boiler, no curdling. Whisk smooth after the bath and chill.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-lemon-curd" },
+          "profiles": [
+            { "result": "Set, silky", "tempC": 82, "time": 45, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Crème anglaise",
+          "notes": "Vanilla custard base for ice cream or dessert sauce. Strain and chill after the bath.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-vanilla-creme-anglaise" },
+          "profiles": [
+            { "result": "Silky custard", "tempC": 82, "time": 60, "recommended": true }
+          ]
+        }
+      ]
     }
   ]
 }
