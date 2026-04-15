@@ -26,6 +26,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 html,
 body {
   margin: 0;
@@ -121,10 +131,69 @@ main {
 
 .category {
   margin-bottom: 64px;
+  scroll-margin-top: 76px;
 }
 
 .category:last-of-type {
   margin-bottom: 16px;
+}
+
+/* ---------- Category picker ---------- */
+
+.picker {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 0 0 64px 0;
+}
+
+@media (min-width: 600px) {
+  .picker {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.picker a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 22px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  transition: border-color 120ms ease, transform 120ms ease,
+    background 120ms ease;
+}
+
+.picker a:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.picker a:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.picker svg {
+  width: 28px;
+  height: 28px;
+  color: var(--fg);
+  opacity: 0.8;
+  transition: color 120ms ease, opacity 120ms ease;
+}
+
+.picker a:hover svg {
+  color: var(--accent);
+  opacity: 1;
 }
 
 .category h2 {
