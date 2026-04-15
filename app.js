@@ -54,6 +54,7 @@ function render(data) {
     const section = document.createElement("section");
     section.className = "category";
     section.id = cat.id;
+    section.dataset.cat = cat.id;
 
     const h2 = document.createElement("h2");
     h2.textContent = cat.name;
@@ -84,6 +85,7 @@ function buildPicker(categories) {
   categories.forEach((cat) => {
     const a = document.createElement("a");
     a.href = `#${cat.id}`;
+    a.dataset.cat = cat.id;
 
     const iconWrap = document.createElement("span");
     iconWrap.className = "picker-icon";
