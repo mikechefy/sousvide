@@ -391,6 +391,15 @@
       "name": "Others",
       "items": [
         {
+          "cut": "Kangaroo fillet",
+          "notes": "Extremely lean red meat — best served rare to medium-rare. Don't push the cook time; longer baths toughen it rather than tenderise. Sear hot and fast after the bath.",
+          "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-kangaroo-steak" },
+          "profiles": [
+            { "result": "Rare",        "tempC": 48, "time": 120, "recommended": true },
+            { "result": "Medium-rare", "tempC": 54, "time": 90 }
+          ]
+        },
+        {
           "cut": "Garlic-infused oil",
           "notes": "Low heat draws out garlic flavour without browning. Keep refrigerated and use within a week — botulism risk with garlic in oil at room temp.",
           "source": { "name": "Anova", "url": "https://recipes.anovaculinary.com/recipe/sous-vide-infused-oils" },
