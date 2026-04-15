@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "version": "1.0",
+    "updated": "2026-04-15",
+    "disclaimer": "Guidelines only. Follow food safety rules for pasteurization — especially for poultry, pork, and eggs."
+  },
+  "categories": [
+    {
+      "id": "beef",
+      "name": "Beef",
+      "items": [
+        {
+          "cut": "Steak — tender cuts (ribeye, strip, tenderloin)",
+          "notes": "Thickness 1–2 inches. Sear hard and fast after the bath for a crust.",
+          "profiles": [
+            { "result": "Rare",        "tempC": 50, "timeMin": 60,  "timeMax": 180 },
+            { "result": "Medium-rare", "tempC": 54, "timeMin": 60,  "timeMax": 240, "recommended": true },
+            { "result": "Medium",      "tempC": 58, "timeMin": 60,  "timeMax": 240 },
+            { "result": "Medium-well", "tempC": 63, "timeMin": 60,  "timeMax": 240 },
+            { "result": "Well",        "tempC": 68, "timeMin": 60,  "timeMax": 240 }
+          ]
+        },
+        {
+          "cut": "Filet mignon",
+          "notes": "Lean and tender — keep cooks short to preserve texture.",
+          "profiles": [
+            { "result": "Rare",        "tempC": 50, "timeMin": 45,  "timeMax": 120 },
+            { "result": "Medium-rare", "tempC": 54, "timeMin": 45,  "timeMax": 180, "recommended": true },
+            { "result": "Medium",      "tempC": 58, "timeMin": 45,  "timeMax": 180 }
+          ]
+        },
+        {
+          "cut": "Roast (prime rib, tri-tip, sirloin)",
+          "notes": "Thick cuts need longer for edge-to-edge doneness.",
+          "profiles": [
+            { "result": "Rare",        "tempC": 52, "timeMin": 300, "timeMax": 480 },
+            { "result": "Medium-rare", "tempC": 55, "timeMin": 300, "timeMax": 480, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "timeMin": 300, "timeMax": 480 }
+          ]
+        },
+        {
+          "cut": "Flank, skirt, hanger",
+          "notes": "Thin cuts. Slice thin across the grain after searing.",
+          "profiles": [
+            { "result": "Medium-rare", "tempC": 54, "timeMin": 120, "timeMax": 240, "recommended": true },
+            { "result": "Medium",      "tempC": 58, "timeMin": 120, "timeMax": 240 }
+          ]
+        },
+        {
+          "cut": "Short ribs",
+          "notes": "The hallmark sousvide trick — tender at steak-like temps given enough time.",
+          "profiles": [
+            { "result": "Tender, steak-like", "tempC": 57, "timeMin": 2880, "timeMax": 4320 },
+            { "result": "Traditional braise", "tempC": 74, "timeMin": 1080, "timeMax": 1440, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Tough cuts (chuck, brisket)",
+          "notes": "Collagen breaks down through either long time or high temperature.",
+          "profiles": [
+            { "result": "Steak-like, medium-rare", "tempC": 57, "timeMin": 2160, "timeMax": 2880 },
+            { "result": "Traditional braise",      "tempC": 74, "timeMin": 1080, "timeMax": 1800, "recommended": true },
+            { "result": "Pull-apart",              "tempC": 85, "timeMin": 480,  "timeMax": 720 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pork",
+      "name": "Pork",
+      "items": [
+        {
+          "cut": "Chop (loin, rib)",
+          "notes": "Thickness 1–1.5 inches. Sear hard after the bath.",
+          "profiles": [
+            { "result": "Blushing",    "tempC": 58, "timeMin": 60, "timeMax": 240, "recommended": true },
+            { "result": "Traditional", "tempC": 62, "timeMin": 60, "timeMax": 240 },
+            { "result": "Well-done",   "tempC": 68, "timeMin": 60, "timeMax": 240 }
+          ]
+        },
+        {
+          "cut": "Tenderloin",
+          "notes": "Lean and tender. Quick cooks, hot sear.",
+          "profiles": [
+            { "result": "Blushing",    "tempC": 58, "timeMin": 60, "timeMax": 240, "recommended": true },
+            { "result": "Traditional", "tempC": 62, "timeMin": 60, "timeMax": 240 }
+          ]
+        },
+        {
+          "cut": "Loin roast",
+          "notes": "Longer cook for even temperature through a thick roast.",
+          "profiles": [
+            { "result": "Medium-rare", "tempC": 58, "timeMin": 180, "timeMax": 300, "recommended": true },
+            { "result": "Medium",      "tempC": 62, "timeMin": 180, "timeMax": 300 }
+          ]
+        },
+        {
+          "cut": "Belly",
+          "notes": "Render fat without drying the meat.",
+          "profiles": [
+            { "result": "Firm, sliceable", "tempC": 75, "timeMin": 720,  "timeMax": 720 },
+            { "result": "Tender",          "tempC": 77, "timeMin": 1440, "timeMax": 1440, "recommended": true },
+            { "result": "Crispy-ready",    "tempC": 85, "timeMin": 480,  "timeMax": 600 }
+          ]
+        },
+        {
+          "cut": "Shoulder / Boston butt",
+          "notes": "For pulled pork, or low-temp for carving.",
+          "profiles": [
+            { "result": "Steak-like", "tempC": 65, "timeMin": 1440, "timeMax": 2160 },
+            { "result": "Pulled",     "tempC": 74, "timeMin": 1080, "timeMax": 1440, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Ribs (baby back, spare)",
+          "notes": "Finish on the grill or under the broiler with sauce.",
+          "profiles": [
+            { "result": "Tender with bite", "tempC": 60, "timeMin": 1440, "timeMax": 2160, "recommended": true },
+            { "result": "Traditional",      "tempC": 74, "timeMin": 720,  "timeMax": 1080 },
+            { "result": "Fall-off-bone",    "tempC": 80, "timeMin": 480,  "timeMax": 720 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poultry",
+      "name": "Poultry",
+      "items": [
+        {
+          "cut": "Chicken breast",
+          "notes": "Pasteurized from 60°C+. Juicier than any oven result.",
+          "profiles": [
+            { "result": "Very soft, juicy",   "tempC": 60, "timeMin": 60, "timeMax": 180, "recommended": true },
+            { "result": "Tender",             "tempC": 63, "timeMin": 60, "timeMax": 180 },
+            { "result": "Firm, traditional",  "tempC": 66, "timeMin": 60, "timeMax": 180 }
+          ]
+        },
+        {
+          "cut": "Chicken thigh",
+          "notes": "More fat tolerates higher temps. Crisp the skin after.",
+          "profiles": [
+            { "result": "Tender",              "tempC": 65, "timeMin": 90, "timeMax": 240 },
+            { "result": "Traditional, firmer", "tempC": 74, "timeMin": 60, "timeMax": 240, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Turkey breast",
+          "notes": "Great for Thanksgiving — pasteurized without drying out.",
+          "profiles": [
+            { "result": "Juicy",       "tempC": 63, "timeMin": 120, "timeMax": 240, "recommended": true },
+            { "result": "Traditional", "tempC": 66, "timeMin": 120, "timeMax": 240 }
+          ]
+        },
+        {
+          "cut": "Duck breast",
+          "notes": "Score the skin first. Render skin hard in a cold pan after.",
+          "profiles": [
+            { "result": "Rare",        "tempC": 54, "timeMin": 60, "timeMax": 180 },
+            { "result": "Medium-rare", "tempC": 57, "timeMin": 60, "timeMax": 180, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "timeMin": 60, "timeMax": 180 }
+          ]
+        },
+        {
+          "cut": "Duck leg (confit)",
+          "notes": "Classic confit texture without rendering in duck fat.",
+          "profiles": [
+            { "result": "Confit-style", "tempC": 80, "timeMin": 480, "timeMax": 720, "recommended": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb",
+      "items": [
+        {
+          "cut": "Chop / rack",
+          "notes": "Delicate. Sear hot and fast after the bath.",
+          "profiles": [
+            { "result": "Rare",        "tempC": 52, "timeMin": 60, "timeMax": 120 },
+            { "result": "Medium-rare", "tempC": 56, "timeMin": 60, "timeMax": 180, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "timeMin": 60, "timeMax": 180 }
+          ]
+        },
+        {
+          "cut": "Leg",
+          "notes": "Long cook for even doneness through a thick cut.",
+          "profiles": [
+            { "result": "Medium-rare", "tempC": 56, "timeMin": 300, "timeMax": 480, "recommended": true },
+            { "result": "Medium",      "tempC": 60, "timeMin": 300, "timeMax": 480 }
+          ]
+        },
+        {
+          "cut": "Shank / shoulder",
+          "notes": "Collagen-rich — long cooks tenderize beautifully.",
+          "profiles": [
+            { "result": "Tender, medium-rare", "tempC": 60, "timeMin": 1440, "timeMax": 2880 },
+            { "result": "Traditional braise",  "tempC": 74, "timeMin": 1080, "timeMax": 1440, "recommended": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fish",
+      "name": "Fish & Seafood",
+      "items": [
+        {
+          "cut": "Salmon",
+          "notes": "Lower temps preserve the silky texture. Salt lightly 10 min before bagging.",
+          "profiles": [
+            { "result": "Sashimi-like",        "tempC": 43, "timeMin": 30, "timeMax": 45 },
+            { "result": "Soft, silky",         "tempC": 50, "timeMin": 30, "timeMax": 45, "recommended": true },
+            { "result": "Traditional, flaky",  "tempC": 55, "timeMin": 30, "timeMax": 45 }
+          ]
+        },
+        {
+          "cut": "Tuna",
+          "notes": "Keep cooks short to preserve color.",
+          "profiles": [
+            { "result": "Rare, sashimi", "tempC": 43, "timeMin": 30, "timeMax": 45, "recommended": true },
+            { "result": "Medium-rare",   "tempC": 52, "timeMin": 30, "timeMax": 45 }
+          ]
+        },
+        {
+          "cut": "White fish (cod, halibut, sea bass)",
+          "notes": "Delicate — handle gently after the bath.",
+          "profiles": [
+            { "result": "Silky", "tempC": 52, "timeMin": 30, "timeMax": 45, "recommended": true },
+            { "result": "Flaky", "tempC": 55, "timeMin": 30, "timeMax": 45 }
+          ]
+        },
+        {
+          "cut": "Shrimp",
+          "notes": "Quick cooks only. Shock in ice water if not serving immediately.",
+          "profiles": [
+            { "result": "Tender, juicy", "tempC": 55, "timeMin": 15, "timeMax": 30, "recommended": true },
+            { "result": "Firm",          "tempC": 60, "timeMin": 15, "timeMax": 30 }
+          ]
+        },
+        {
+          "cut": "Scallops",
+          "notes": "Sear hard on one side after — don't flip.",
+          "profiles": [
+            { "result": "Just-set", "tempC": 50, "timeMin": 30, "timeMax": 45, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Lobster tail",
+          "notes": "Butter-poached luxury. Bag with a pat of butter.",
+          "profiles": [
+            { "result": "Butter-tender", "tempC": 60, "timeMin": 30, "timeMax": 45, "recommended": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs",
+      "items": [
+        {
+          "cut": "Whole egg (in shell)",
+          "notes": "Times vary slightly with egg size and starting temperature.",
+          "profiles": [
+            { "result": "Onsen tamago (soft)", "tempC": 63, "timeMin": 45, "timeMax": 60, "recommended": true },
+            { "result": "Soft custardy",       "tempC": 64, "timeMin": 45, "timeMax": 45 },
+            { "result": "Medium",              "tempC": 68, "timeMin": 45, "timeMax": 45 },
+            { "result": "Hard-boiled",         "tempC": 75, "timeMin": 60, "timeMax": 60 },
+            { "result": "Pasteurized raw",     "tempC": 57, "timeMin": 75, "timeMax": 75 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vegetables",
+      "name": "Vegetables",
+      "items": [
+        {
+          "cut": "Root vegetables (carrots, parsnips, beets)",
+          "notes": "Tender without going mushy — far better than boiling.",
+          "profiles": [
+            { "result": "Tender, firm bite", "tempC": 85, "timeMin": 60, "timeMax": 120, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Potatoes",
+          "notes": "Great for parboil-then-roast without waterlogging.",
+          "profiles": [
+            { "result": "Fork-tender", "tempC": 85, "timeMin": 45, "timeMax": 90, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Asparagus / green beans",
+          "notes": "Bright color, crisp-tender snap.",
+          "profiles": [
+            { "result": "Crisp-tender", "tempC": 85, "timeMin": 10, "timeMax": 15, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Corn on the cob",
+          "notes": "Sweeter and more concentrated than boiled.",
+          "profiles": [
+            { "result": "Tender sweet", "tempC": 83, "timeMin": 30, "timeMax": 30, "recommended": true }
+          ]
+        },
+        {
+          "cut": "Winter squash (butternut, acorn)",
+          "notes": "Good base for soups and purées.",
+          "profiles": [
+            { "result": "Tender", "tempC": 85, "timeMin": 60, "timeMax": 120, "recommended": true }
+          ]
+        }
+      ]
+    }
+  ]
+}

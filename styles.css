@@ -1,0 +1,285 @@
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0b;
+  --muted: #6b7280;
+  --border: #e8e8ea;
+  --surface: #f7f7f8;
+  --accent: #6366f1;
+  --radius: 8px;
+  --max-width: 760px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #08080a;
+    --fg: #fafafa;
+    --muted: #8b8d97;
+    --border: #1c1d22;
+    --surface: #111115;
+    --accent: #a5adff;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#search {
+  flex: 1;
+  min-width: 0;
+  max-width: 280px;
+  margin-left: auto;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+#search::placeholder {
+  color: var(--muted);
+}
+
+#search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+/* ---------- Main ---------- */
+
+main {
+  padding-top: 48px;
+  padding-bottom: 80px;
+}
+
+.category {
+  margin-bottom: 64px;
+}
+
+.category:last-of-type {
+  margin-bottom: 16px;
+}
+
+.category h2 {
+  margin: 0 0 28px 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.item {
+  margin-bottom: 36px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+
+.item .notes {
+  margin: 0 0 14px 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.profiles {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.profiles tr {
+  border-top: 1px solid var(--border);
+}
+
+.profiles tr:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.profiles td {
+  padding: 11px 0;
+  font-size: 14px;
+  vertical-align: baseline;
+}
+
+.profiles .result {
+  width: 52%;
+  color: var(--fg);
+  padding-right: 12px;
+}
+
+.profiles .temp {
+  width: 22%;
+  color: var(--fg);
+  white-space: nowrap;
+  padding-right: 12px;
+}
+
+.profiles .time {
+  width: 26%;
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.profiles tr.recommended .result {
+  position: relative;
+  padding-left: 16px;
+}
+
+.profiles tr.recommended .result::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding-top: 24px;
+  padding-bottom: 48px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+/* ---------- Noscript ---------- */
+
+.noscript {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 520px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .header-inner {
+    gap: 12px;
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+  #search {
+    max-width: none;
+  }
+
+  main {
+    padding-top: 32px;
+  }
+
+  .category {
+    margin-bottom: 48px;
+  }
+
+  .profiles .result {
+    width: 48%;
+  }
+
+  .profiles .temp {
+    width: 22%;
+  }
+
+  .profiles .time {
+    width: 30%;
+  }
+}
